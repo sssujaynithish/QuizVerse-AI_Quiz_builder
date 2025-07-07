@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="theme-stylesheet" rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>AI Quiz Builder</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <h3 id="welcome-user"></h3>
+        <button class="button-style" onclick="logout()">Logout</button>
+    </div>
+    <div class="parent-container">
+        <div class="titlebar">
+            <h1>AI Quiz Builder</h1>
+        </div>
+        <div class="input-container">
+            <input type="text" class="input-bar" id="quiz-topic"
+                placeholder="Enter quiz topic (eg: AI, Geography, India...)" />
+            <input type="number" class="question-number-input-bar" id="no-of-question"
+                placeholder="Enter no of questions" />
+            <button onclick="generateQuiz()" class="button-style">Generate Quiz</button>
+        </div>
+        <div id="loader" class="loader">Generating quiz...</div>
+
+        <div class="quiz-question-container">
+            <h2 id="question-number"></h2>
+            <p id="question"></p>
+        </div>
+        <div class="quiz-option-container" id="quiz-option-container">
+        </div>
+        <div class="button-container" id="submit-button">
+            <button class="button-style" id="submit-button" onclick="calculateScore()">Submit</button>
+            <button class="button-style" id="next-button" onclick="nextQuestion()">Next</button>
+            <button class="button-style" id="reset-button" onclick="resetQuiz()">Reset</button>
+            <button class="button-style" id="share-button" onclick="shareQuiz()">Share your quiz</button>
+        </div>
+        <div class="answer-container">
+            <p id="answer"></p>
+        </div>
+    </div>
+    <div class="features-container">
+        <h2 style="text-align: center; padding-top: 15px;">User Features</h2>
+        <div class="feature-button-container">
+            <button onclick="loadQuizHistory()" class="button-style">View History</button>
+            <button class="button-style" onclick="loadSharedQuizzes()">Shared Quiz</button>
+            <button onclick="toggleTheme()" class="button-style">Toggle Theme</button>
+        </div>
+        <div class="shared-quiz-container" id="shared-quiz-container"></div>
+        <div class="history-container" id="history-container">
+            <h2 style="padding-left: 10px;">Your quiz history</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Score</th>
+                        <th>Total Questions</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="history-table-body">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="leaderboard-container" id="leaderboard-container">
+            <h2>🏆 Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Topic</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

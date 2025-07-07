@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="theme-stylesheet" rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>AI Quiz Builder - Login</title>
+</head>
+
+<body>
+    <div class="loginform">
+        <div class="form-box">
+            <h1>Login</h1><br>
+            <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+            <br>
+            <form onsubmit="loginUser(event)">
+
+                <label>Email :</label>
+                <input id="email" type="email" required /><br><br>
+
+                <label>Password : </label>
+                <input id="password" type="password" required /><br><br>
+
+                <button class="button-style" type="submit">Login</button>
+
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

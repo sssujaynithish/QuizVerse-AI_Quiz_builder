@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background: #121212;
+    color: #f0f0f0;
+}
+
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    background: #1e1e1e;
+    align-items: center;
+    height: fit-content;
+}
+
+.parent-container div {
+    margin: 10px;
+}
+
+.parent-container .titlebar {
+    text-align: center;
+    color: #ffffff;
+}
+
+.parent-container .quiz-question-container {
+    width: 300px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.parent-container .quiz-option-container {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.parent-container .button-container {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.button-style {
+    background: #2e2e2e;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 9px;
+    width: auto;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.button-style:hover {
+    background: #ffffff;
+    color: #121212;
+}
+
+.input-bar {
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #444;
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+.question-number-input-bar {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #444;
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+.loader {
+    display: none;
+}
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "poppins";
+    padding: 8px;
+    background: #1c1c1c;
+    color: #ffffff;
+}
+
+.loginform {
+    background: #1e1e1e;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-box {
+    border: 2px solid #444;
+    padding: 60px;
+    background: #2a2a2a;
+    color: #f0f0f0;
+}
+
+/* Common Style for History and Leaderboard Containers */
+.history-container,
+.leaderboard-container {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #1b1b1b;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poppins', sans-serif;
+    color: #f0f0f0;
+}
+
+/* Title Styling */
+.history-container h2,
+.leaderboard-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Table Styling */
+.history-container table,
+.leaderboard-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+}
+
+.history-container th,
+.history-container td,
+.leaderboard-container th,
+.leaderboard-container td {
+    padding: 10px 14px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.history-container th,
+.leaderboard-container th {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.history-container tr:nth-child(even),
+.leaderboard-container tr:nth-child(even) {
+    background-color: #1f1f1f;
+}
+
+.history-container tr:hover,
+.leaderboard-container tr:hover {
+    background-color: #2a2a2a;
+    transition: background-color 0.3s ease;
+}
+
+/* Feature Button Padding (if needed) */
+.feature-button-container {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Quiz box */
+.quiz-box {
+    display: flex;
+    background: #1e1e1e;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .history-container,
+    .leaderboard-container {
+        padding: 10px;
+    }
+
+    .history-container h2,
+    .leaderboard-container h2 {
+        font-size: 18px;
+    }
+
+    .history-container th,
+    .history-container td,
+    .leaderboard-container th,
+    .leaderboard-container td {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .parent-container,
+    .loginform,
+    .form-box {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .input-bar,
+    .question-number-input-bar,
+    .button-style {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .parent-container .quiz-question-container,
+    .parent-container .quiz-option-container {
+        width: 90%;
+    }
+
+    .parent-container .button-container {
+        flex-direction: column;
+        width: 90%;
+        gap: 10px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    .feature-button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .form-box {
+        padding: 30px;
+    }
+}
